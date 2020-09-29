@@ -16,12 +16,12 @@ class CreateUserTable extends Migration
         //
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('username');
+            $table->string('username')->nullable();
             $table->string('password');
-            $table->string('name');
-            $table->string('surname');           
-            $table->string('email');
-            $table->integer('tel')->nullable();
+            $table->string('name')->nullable();
+            $table->string('surname')->nullable();           
+            $table->string('email')->nullable();
+            $table->string('tel');
             $table->string('adress')->nullable();
             $table->boolean('status');
             $table->boolean('member_type');
