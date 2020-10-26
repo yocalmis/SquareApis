@@ -3,14 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Comment;
 
-
-class CommentController extends Controller
+class AutoWashPriceTimeController extends Controller
 {
-   
-
-
+    //
 }
-
-

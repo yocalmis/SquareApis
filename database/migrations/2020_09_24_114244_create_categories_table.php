@@ -18,8 +18,11 @@ class CreateCategoriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('cat_name');
             $table->integer('parent');
-            $table->boolean('status');                         
+            $table->boolean('status');                       
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
             });
     }
 

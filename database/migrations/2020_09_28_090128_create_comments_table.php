@@ -20,10 +20,13 @@ class CreateCommentsTable extends Migration
             $table->integer('categories_id');
             $table->integer('product_id');           
             $table->integer('user_id');
-            $table->string('comment');           
+            $table->text('comment');           
             $table->string('star');
             $table->string('image');                                  
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
             });
     }
 

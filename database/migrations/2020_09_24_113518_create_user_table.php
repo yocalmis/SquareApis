@@ -26,12 +26,18 @@ class CreateUserTable extends Migration
             $table->boolean('status');
             $table->boolean('member_type');
             $table->integer('parent_id');
+            //$table->integer('business_id'); 
+			$table->string('comments'); 
             $table->date('start_date');
             $table->date('finish_date');
             $table->string('device')->nullable();           
             $table->integer('login_code')->nullable();  
             $table->string('key')->nullable();                                  
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
+
             });
     }
 

@@ -19,7 +19,7 @@ class CreateReservationsTable extends Migration
             $table->string('user_id');
             $table->string('categories_id');
             $table->string('product_id');   
-            $table->string('product_owner_id');           
+            //$table->string('product_owner_id');           
             $table->date('date');    
             $table->date('start_date');
             $table->date('finish_date');                   
@@ -28,6 +28,9 @@ class CreateReservationsTable extends Migration
             $table->string('commission');  
             $table->string('comments')->nullable();                       
             $table->timestamps();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';
             });
     }
 

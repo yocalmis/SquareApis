@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWishlistTable extends Migration
+class CreateCompanyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,16 +14,18 @@ class CreateWishlistTable extends Migration
     public function up()
     {
         //
-        Schema::create('wishlist', function (Blueprint $table) {
+	        Schema::create('companies', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('user_id');
+            $table->integer('user_id');
             $table->string('categories_id');
-            $table->string('product_id');                                
+            $table->string('product_id');                        
             $table->timestamps();
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_general_ci';
-            });
+
+            });		
+		
     }
 
     /**
@@ -34,6 +36,6 @@ class CreateWishlistTable extends Migration
     public function down()
     {
         //
-        Schema::dropIfExists('wishlist');
+		 Schema::dropIfExists('companies');
     }
 }

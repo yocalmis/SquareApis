@@ -16,6 +16,3 @@ Route::get('/', function () {
      return "First query";
 });
 
-
-Route::get('/user/', "UserController@index");
-Route::get('/user/register', "UserController@register");

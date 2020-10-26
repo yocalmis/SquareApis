@@ -21,7 +21,10 @@ class CreateCardsTable extends Migration
             $table->string('card_number');
             $table->string('card_valid');           
             $table->string('security');
-            $table->string('name_surname');                                 
+            $table->string('name_surname');   
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8';
+            $table->collation = 'utf8_general_ci';                              
             $table->timestamps();
             });
     }
